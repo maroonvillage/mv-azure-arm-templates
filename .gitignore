@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+ExportedTemplate-AppliationInsights.zip
+ExportedTemplate-AppService-DeploymentSlot.zip
+.gitignore
+ExportedTemplate-AppService.zip
+ExportedTemplate-AppServicePlan.zip
+.DS_Store

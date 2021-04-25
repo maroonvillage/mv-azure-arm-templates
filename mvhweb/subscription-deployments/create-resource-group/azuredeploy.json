@@ -10,7 +10,7 @@
       },
       "rgLocation": {
         "type": "string",
-        "defaultValue": "[deployment().location]",
+        "defaultValue": "WEST US",
         "metadata": {
           "description": "Location for the resourceGroup"
         }

@@ -2,10 +2,10 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "sites_mvhairmarketplaceweb_name": {
+        "sites_webapp_name": {
             "value": null
         },
-        "serverfarms_ASP_mvwebapps_9a65_externalid": {
+        "serverfarms_ASP_webapps_externalid": {
             "value": null
         }
     }

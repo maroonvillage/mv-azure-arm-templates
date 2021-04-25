@@ -37,7 +37,7 @@
     },
     "resources": [
       {
-        "apiVersion": "2020-06-01",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Web/serverfarms",
         "kind": "app",
         "name": "[variables('appServicePlanName')]",
@@ -52,7 +52,7 @@
         }
       },
       {
-        "apiVersion": "2020-06-01",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Web/sites",
         "kind": "app",
         "name": "[variables('webAppPortalName')]",
@@ -69,7 +69,7 @@
         ]
       },
       {
-        "apiVersion": "2020-06-01",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Web/sites/slots",
         "name": "[concat(variables('webAppPortalName'), '/', parameters('environments')[copyIndex()])]",
         "kind": "app",

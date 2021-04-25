@@ -4,7 +4,7 @@
     "parameters": {
         "appServicePlanName": {
             "defaultValue": "ASP-MaroonVillageWebApps",
-            "type": "String"
+            "type": "string"
         },
       "location": {
         "type": "string",

@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "baseResourceName": {
+      "appServiceName": {
         "type": "string",
         "metadata": {
           "description": "Name of the resource"
@@ -32,8 +32,8 @@
     },
     "variables": {
       "standardPlanMaxAdditionalSlots": 4,
-      "webAppPortalName": "[concat(parameters('baseResourceName'), 'Portal')]",
-      "appServicePlanName": "[concat('AppServicePlan-', parameters('baseResourceName'))]"
+      "webAppPortalName": "[concat(parameters('appServiceName'), 'Portal')]",
+      "appServicePlanName": "[concat('AppServicePlan-', parameters('appServiceName'))]"
     },
     "resources": [
       {

@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "appServicePlanName": {
+        "name": {
             "defaultValue": "ASP-MaroonVillageWebApps",
             "type": "string"
         },
@@ -19,7 +19,7 @@
         {
             "type": "Microsoft.Web/serverfarms",
             "apiVersion": "2018-02-01",
-            "name": "[parameters('appServicePlanName')]",
+            "name": "[parameters('name')]",
             "location": "[parameters('location')]",
             "sku": {
                 "name": "S1",

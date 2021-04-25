@@ -50,7 +50,7 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "name": {"value": "[parameters('appServiceName')]"},
+                    "appServiceName": {"value": "[parameters('appServiceName')]"},
                     "location": {"value": "[parameters('location')]"}
                 }
             }

@@ -19,9 +19,6 @@
             "name": "appService01",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-10-01",
-            "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments','appServicePlan01')]"
-            ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {

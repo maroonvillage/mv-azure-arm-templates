@@ -16,8 +16,8 @@
         }
     },
     "variables": {
-        "linked-template": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/app-service-plan/template.json?token=AA2XPU3I5JRVUH2AKXOSHSLAQWSAG",
-        "linked-template-two": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/app-service-custom-deployment-slots/template.json?token=AA2XPU47CQIDVHKS4F75UEDAQWSFE"
+        "linked-template": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/app-service-plan/template.json",
+        "linked-template-two": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/app-service-custom-deployment-slots/template.json"
     },
     "resources": [
         {
@@ -27,7 +27,8 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linked-template')]"
+                    "uri": "[variables('linked-template')]",
+                    "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
                     "name": {"value": "[parameters('appServicePlanName')]"},

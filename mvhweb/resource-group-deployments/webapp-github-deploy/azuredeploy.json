@@ -80,7 +80,6 @@
     "variables": {
         "hostingPlanName": "[concat('hpn-', resourceGroup().name)]",
         "standardPlanMaxAdditionalSlots": 4,
-        "webAppPortalName": "[concat(parameters('siteName'), 'Portal')]",
         "appServicePlanName": "[concat('AppServicePlan-', parameters('siteName'))]",
         "gitRepoUrl": "[parameters('repoUrl')]"
     },
@@ -129,7 +128,7 @@
         {
             "apiVersion": "2018-02-01",
             "type": "Microsoft.Web/sites/slots",
-            "name": "[concat(variables('webAppPortalName'), '/', parameters('environments')[copyIndex()])]",
+            "name": "[concat(parameters('siteName'), '/', parameters('environments')[copyIndex()])]",
             "kind": "app",
             "location": "[parameters('location')]",
             "comments": "This specifies the web app slots.",
@@ -140,7 +139,7 @@
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/Sites', variables('webAppPortalName'))]"
+                "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
             ],
             "copy": {
                 "name": "webPortalSlot",

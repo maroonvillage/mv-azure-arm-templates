@@ -80,7 +80,6 @@
     "variables": {
         "hostingPlanName": "[concat('hpn-', resourceGroup().name)]",
         "standardPlanMaxAdditionalSlots": 4,
-        "appServicePlanName": "[concat('AppServicePlan-', parameters('siteName'))]",
         "gitRepoUrl": "[parameters('repoUrl')]"
     },
     "resources": [
@@ -136,7 +135,7 @@
                 "displayName": "WebAppSlots"
             },
             "properties": {
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
             },
             "dependsOn": [
                 "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"

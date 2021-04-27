@@ -12,7 +12,7 @@
         }
     },
     "variables": {
-        "linked-template-two": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/app-service-custom-deployment-slots/template.json"
+        "linked-template-two": "https://raw.githubusercontent.com/maroonvillage/mv-azure-arm-templates/main/mvhweb/resource-group-deployments/webapp-github-deploy/azuredeploy.json"
     },
     "resources": [
         {
@@ -23,10 +23,10 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "[variables('linked-template-two')]",
-                    "contentVersion": "1.0.0.0"
+                    "contentVersion": "1.0.0.1"
                 },
                 "parameters": {
-                    "name": {"value": "[parameters('appServiceName')]"},
+                    "siteName": {"value": "[parameters('appServiceName')]"},
                     "location": {"value": "[parameters('location')]"}
                 }
             }

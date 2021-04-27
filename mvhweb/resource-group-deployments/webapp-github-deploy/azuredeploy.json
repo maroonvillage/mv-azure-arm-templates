@@ -92,8 +92,16 @@
                 "name": "[parameters('sku')]",
                 "capacity": "[parameters('workerSize')]"
             },
+            "kind": "app",
             "properties": {
-                "name": "[if(lessOrEquals(length(parameters('environments')), variables('standardPlanMaxAdditionalSlots')), 'S1', 'P1')]"
+                "perSiteScaling": false,
+                "maximumElasticWorkerCount": "[variables('standardPlanMaxAdditionalSlots')]",
+                "isSpot": false,
+                "reserved": false,
+                "isXenon": false,
+                "hyperV": false,
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0
             }
         },
         {
